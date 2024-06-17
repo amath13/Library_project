@@ -31,7 +31,7 @@ jobs:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2.1.0
       with:
-        token: ${{ secrets.CODECOV_TOKEN }}  # Assurez-vous de configurer CODECOV_TOKEN dans les secrets de votre repository
+        token: ${{ secrets.CODECOV_TOKEN }}
         file: ./coverage.xml
         flags: unittests
         name: codecov-umbrella
