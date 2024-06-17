@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: '3.x'  # Version de Python à utiliser
 
     - name: Install dependencies
       run: |
@@ -31,7 +31,7 @@ jobs:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2.1.0
       with:
-        token: ${{ secrets.CODECOV_TOKEN }}
+        token: ${{ secrets.CODECOV_TOKEN }}  # Assurez-vous de configurer CODECOV_TOKEN dans les secrets de votre repository
         file: ./coverage.xml
         flags: unittests
         name: codecov-umbrella
